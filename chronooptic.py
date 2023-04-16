@@ -3,9 +3,6 @@ from notifypy import Notify
 import pyttsx3
 import webbrowser
 import pyautogui
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service as ChromeService
 
 # work time is in minutes
 work_time = 1
@@ -48,6 +45,7 @@ def webpage2():
     webbrowser.open_new_tab("page2.html")
     flag = 1
     if flag == 1:
+      # 15 min = 900 sec
       sleep(rest_time)
       pyautogui.hotkey('ctrl', 'w')
       sleep(0.5)
