@@ -36,10 +36,27 @@ def web():
       pyautogui.hotkey('ctrl', 'w')
       sleep(0.5)
       pyautogui.hotkey('alt', 'tab')
-      minute_checker()
+      # minute_checker()
+      hour_checker()
   except webbrowser.Error:
     message = "Someting went wrong with the browser"
     notification(message)
+
+def hour():
+  print("Its been 1 hr")
+  minute_checker()
+
+time_count = 1
+
+def hour_checker():
+  global time_count
+  time_count += 1
+  print(time_count)
+  if time_count <=2:
+    minute_checker()
+  else:
+    time_count = 1
+    hour()
 
 # text to speech function
 def tts():
