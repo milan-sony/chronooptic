@@ -4,7 +4,6 @@ import pyttsx3
 import webbrowser
 import pyautogui
 
-
 # work time is in minutes
 work_time = 1
 # rest time in in seconds
@@ -24,7 +23,6 @@ def notification(message):
   notification.icon = "./icon.png"
   notification.audio = "./notificationsound.wav"
   notification.send()
-
 
 # open web browser function
 def web():
@@ -74,13 +72,13 @@ def tts():
 # function to track work_time
 def minute_checker():
   worktime = convert_minute_to_second()
-  while worktime:
-    # timer
-    mins, secs = divmod(worktime, 60)
-    timer = '{:02d}:{:02d}'.format(mins, secs)
-    print(timer, end="\r")
-    sleep(1)
-    worktime -= 1
+  # while worktime:
+  #   # timer
+  #   mins, secs = divmod(worktime, 60)
+  #   timer = '{:02d}:{:02d}'.format(mins, secs)
+  #   print(timer, end="\r")
+  #   sleep(1)
+  #   worktime -= 1
   sleep(worktime)
   message = f"You have been using this system for {work_time} minute"
   notification(message)

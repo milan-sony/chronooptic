@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+body{
+  background-color: #ffd881;
+}
+h3{
+  color: #603419;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
