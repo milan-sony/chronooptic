@@ -52,6 +52,7 @@ def tts():
   engine.setProperty('voice', voices[0].id)
   engine.say(f"Hey, you have been using this system for {work_time} minute. Relax and take some rest")
   engine.runAndWait()
+  web()
 
 # function to track work_time
 def minute_checker():
