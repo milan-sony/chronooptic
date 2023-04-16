@@ -24,7 +24,7 @@ def notification(message):
   notification.application_name = "CHRONOOPTIC"
   notification.title = "Remainder"
   notification.message = str(message)
-  notification.icon = "./icon.png"
+  notification.icon = "./icon1.png"
   notification.audio = "./notificationsound.wav"
   notification.send()
 

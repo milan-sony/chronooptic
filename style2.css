@@ -5,14 +5,20 @@
   list-style-type: none;
 }
 body{
-  background-color: #ffd881;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #ffff;
 }
-h3{
-  color: #603419;
+.title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-weight: 400;
+}
+.t-data{
+  font-size: 15px;
+}
+.last-text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
 }
