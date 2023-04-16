@@ -1,6 +1,9 @@
 from time import sleep
 from notifypy import Notify
 import pyttsx3
+import webbrowser
+import pyautogui
+
 
 # work time is in minutes
 work_time = 1
@@ -21,6 +24,22 @@ def notification(message):
   notification.icon = "./icon.png"
   notification.audio = "./notificationsound.wav"
   notification.send()
+
+
+# open web browser function
+def web():
+  try:
+    webbrowser.open_new_tab("index.html")
+    flag = 1
+    if flag == 1:
+      sleep(rest_time)
+      pyautogui.hotkey('ctrl', 'w')
+      sleep(0.5)
+      pyautogui.hotkey('alt', 'tab')
+      minute_checker()
+  except webbrowser.Error:
+    message = "Someting went wrong with the browser"
+    notification(message)
 
 # text to speech function
 def tts():
