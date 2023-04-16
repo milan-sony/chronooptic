@@ -1,18 +1,16 @@
 from time import sleep
 from notifypy import Notify
-
+import pyttsx3
 
 # work time is in minutes
 work_time = 1
 # rest time in in seconds
 rest_time = 20
 
-
 # function to convert minute to second
 def convert_minute_to_second():
   second = work_time * 60
   return second
-
 
 # function to display desktop notification
 def notification(message):
@@ -23,6 +21,18 @@ def notification(message):
   notification.icon = "./icon.png"
   notification.audio = "./notificationsound.wav"
   notification.send()
+
+# text to speech function
+def tts():
+  engine = pyttsx3.init()
+  # getting details of current speaking rate
+  engine.setProperty('rate', 200)
+  voices = engine.getProperty('voices')
+  #changing index, changes voices. o for male
+  #changing index, changes voices. 1 for female
+  engine.setProperty('voice', voices[0].id)
+  engine.say(f"Hey, you have been using this system for {work_time} minute. Relax and take some rest")
+  engine.runAndWait()
 
 # function to track work_time
 def minute_checker():
@@ -37,5 +47,6 @@ def minute_checker():
   sleep(worktime)
   message = f"You have been using this system for {work_time} minute"
   notification(message)
+  tts()
 
 minute_checker()
