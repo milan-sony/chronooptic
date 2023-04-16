@@ -1,4 +1,5 @@
 from time import sleep
+from notifypy import Notify
 
 
 # work time is in minutes
@@ -13,7 +14,18 @@ def convert_minute_to_second():
   return second
 
 
-def tracker():
+# function to display desktop notification
+def notification(message):
+  notification = Notify()
+  notification.application_name = "CHRONOOPTIC"
+  notification.title = "Remainder"
+  notification.message = str(message)
+  notification.icon = "./icon.png"
+  notification.audio = "./notificationsound.wav"
+  notification.send()
+
+# function to track work_time
+def minute_checker():
   worktime = convert_minute_to_second()
   while worktime:
     # timer
@@ -23,6 +35,7 @@ def tracker():
     sleep(1)
     worktime -= 1
   sleep(worktime)
-  print("You have been working for 1 min")
+  message = f"You have been using this system for {work_time} minute"
+  notification(message)
 
-tracker()
+minute_checker()
