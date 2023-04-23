@@ -22,7 +22,7 @@ def notification(message):
   notification.title = "Remainder"
   notification.message = str(message)
   notification.icon = "./icon.png"
-  notification.audio = "./notificationsound.wav"
+  notification.audio = "./notification.wav"
   notification.send()
 
 # open web browser function
