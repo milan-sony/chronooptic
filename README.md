@@ -74,3 +74,7 @@ or
 chronooptic.py - will gives you alert for every 20 minutes
 
 chronooptic2.py - will gives you alert notification along with voice
+
+## Screenshot
+
+<img src="screenshot.png">
