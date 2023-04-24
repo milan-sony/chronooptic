@@ -21,8 +21,10 @@ import pyttsx3
 
 """
 
-work_time = 1200 # 20 minute in second
-rest_time = 20000 # 20 second in millisecond
+work_time = 5
+rest_time = 5000
+# work_time = 1200 # 20 minute in second
+# rest_time = 20000 # 20 second in millisecond
 
 start_time = datetime.datetime.now()
 
@@ -72,7 +74,7 @@ def create_window1(hr, min, sec):
   window1.attributes("-topmost", 1)
   window1.geometry("600x400")
   window1.title("ALERT | CHRONOOPTIC")
-  window1.iconbitmap("./icon.ico")
+  window1.iconbitmap("./icon2.ico")
   window1.resizable(False, False)
   window1.config(bg="#6886C5")
   playsound('./notification.wav')
