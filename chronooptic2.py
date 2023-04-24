@@ -21,8 +21,8 @@ import pyttsx3
 
 """
 
-work_time = 5 # seconds
-rest_time = 5000 # 5 milliseconds
+work_time = 1200 # 20 minute in second
+rest_time = 20000 # 20 second in millisecond
 
 start_time = datetime.datetime.now()
 
