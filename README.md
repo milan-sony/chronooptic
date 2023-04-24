@@ -77,4 +77,4 @@ chronooptic2.py - will gives you alert notification along with voice
 
 ## Screenshot
 
-<img src="screenshot.png">
+<img src="Screenshot.png">
