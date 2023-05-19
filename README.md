@@ -9,7 +9,6 @@ Do you also spend too much time infront of screen? Spending long periods looking
 ## Libraries used
 
 - `tkinter`
-- `pyttsx3`
 - `playsound`
 
 ## Read documentation about
@@ -63,12 +62,6 @@ Now run the script
 
 ```bash
   python chronooptic.py
-```
-
-or
-
-```bash
-  python chronooptic2.py
 ```
 
 ## Screenshot
