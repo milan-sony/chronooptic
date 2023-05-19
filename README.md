@@ -71,8 +71,6 @@ or
   python chronooptic2.py
 ```
 
-chronooptic.py - will gives you alert for every 20 minutes
-
 ## Screenshot
 
 <img src="Screenshot.png">
