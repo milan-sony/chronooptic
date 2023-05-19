@@ -2,6 +2,8 @@ from tkinter import *
 import datetime
 import time
 from playsound import playsound
+from datetime import date
+from time import localtime, strftime
 
 """
 --------------------NOTES--------------------
@@ -26,27 +28,20 @@ rest_time = 20000 # 20 second in millisecond
 start_time = datetime.datetime.now()
 
 def start():
-  # print("started")
-  # print("start time: ", start_time)
   time.sleep(work_time)
   end_time = datetime.datetime.now()
-  # print("end time: ", end_time)
   time_diff = end_time - start_time
-  # print("time difference:", time_diff)
   time_format(time_diff)
 
 def time_format(time_diff):
-  # Define the time as a string
+  # define the time as a string
   time_str = str(time_diff)
-  # Parse the string to a datetime object
+  # parse the string to a datetime object
   time_obj = datetime.datetime.strptime(time_str, '%H:%M:%S.%f')
-  # Extract hours, minutes, seconds, and milliseconds
+  # extract hours, minutes, seconds, and milliseconds
   hours = time_obj.hour
   minutes = time_obj.minute
   seconds = time_obj.second
-  # milliseconds = time_obj.microsecond // 1000
-  # Print the result
-  # print(f"hours: {hours} minutes: {minutes} seconds: {seconds}")
   create_window1(hours, minutes, seconds)
 
 # define the function to create the first window
@@ -68,15 +63,15 @@ def create_window1(hr, min, sec):
     font="Impact 30",
     fg="#F9F9F9",
     bg="#6886C5",
-    height=4
+    height=3
   )
   lb1.pack()
   lb2 = Label(
-    window1, 
+    window1,
     text=f"You have been using this system for {hours} hours {minutes} minutes and {secs} seconds",
     font=("SegoeUI 10"),
     fg="#F9F9F9",
-    bg="#6886C5",
+    bg="#6886C5"
   )
   lb2.pack()
   lb3 = Label(
@@ -85,17 +80,30 @@ def create_window1(hr, min, sec):
     font=("Impact 20"),
     fg="#F9F9F9",
     bg="#6886C5",
-    height=2
+    height=3
   )
   lb3.pack()
+
+  # current date and time
+  current_date = date.today()
+  current_time = strftime("%I:%M %p", localtime())
+
   lb4 = Label(
     window1,
-    text="NB: This window will be closed automatically after 20 seconds",
+    text=f"Today's Date: {current_date} & Current Time: {current_time}",
     font=("SegoeUI 10"),
     fg="#F9F9F9",
-    bg="#6886C5",
+    bg="#6886C5"
   )
   lb4.pack()
+  lb5 = Label(
+    window1,
+    text=f"NB: This window will be closed automatically after 20 seconds",
+    font=("SegoeUI 10"),
+    fg="#F9F9F9",
+    bg="#6886C5"
+  )
+  lb5.pack()
   # start the timer for the next window
   window1.after(rest_time, lambda: next_window(window1, start))
   # redirect to a function if X is clicked
@@ -109,4 +117,6 @@ def next_window(current_window, next_function):
   # start the next window
   next_function()
 
-start()
+# function call
+while True:
+  start()
