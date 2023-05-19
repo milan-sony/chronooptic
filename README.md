@@ -4,7 +4,7 @@
 
 # chronooptic
 
-Do you also spend too much time infront of screen? Spending long periods looking at a screen can strain the eyes. Chronooptic is a simple program that gives alert based on <a href = "https://www.healthline.com/health/eye-health/20-20-20-rule">20-20-20 rule</a>. It works in such a way that for every 20 minutes it will gives you an alert. The are many other applications out there but I taught to buld one for myself.
+Do you also spend too much time infront of screen? Spending long periods looking at a screen can strain the eyes. Chronooptic is a simple program that gives alert based on <a href = "https://www.healthline.com/health/eye-health/20-20-20-rule">20-20-20 rule</a>. It works in such a way that for every 20 minutes it will gives you an alert. The are many other applications out there but I thought to buld one for myself.
 
 ## Libraries used
 
